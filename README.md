@@ -47,3 +47,4 @@
 
 - [ ] add mongo data source support
 - [ ] add  bloom algorithm
+- [ ] add  tests example
