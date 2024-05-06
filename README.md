@@ -27,64 +27,18 @@
 
 ## ⚙ Usage
 
-```go
-package main
+```rust
 
-import (
-	"fmt"
-	"github.com/StellarisW/go-sensitive"
-)
-
-func main() {
-    filterManager := sensitive.NewFilter(
-        sensitive.StoreOption{
-            Type: sensitive.StoreMemory
-        },
-        sensitive.FilterOption{
-            Type: sensitive.FilterDfa
-        }
-    )
-    
-    // 加载字典
-    
-    err:=filterManager.GetStore().LoadDictPath("path-to-dict")
-    if err != nil {
-        fmt.Println(err)
-        return
-	}
-    
-    // 动态增加词汇
-    
-    err=filterManager.GetStore().AddWord("这是敏感词1", "这是敏感词2", "这是敏感词3")
-    if err != nil {
-        fmt.Println(err)
-        return
-	}
-    
-    fmt.Println(filterManager.GetFilter().IsSensitive("这是敏感词1,这是敏感词2,这是敏感词3,这是敏感词1,这里没有敏感词"))
-    
-    fmt.Println(filterManager.GetFilter().Filter("这是敏感词1,这是敏感词2,这是敏感词3,这是敏感词1,这里没有敏感词"))
-    
-    fmt.Println(filterManager.GetFilter().Replace("这是敏感词1,这是敏感词2,这是敏感词3,这是敏感词1,这里没有敏感词", '*'))
-    
-    fmt.Println(filterManager.GetFilter().FindOne("这是敏感词1,这是敏感词2,这是敏感词3,这是敏感词1,这里没有敏感词"))
-
-    fmt.Println(filterManager.GetFilter().FindAll("这是敏感词1,这是敏感词2,这是敏感词3,这是敏感词1,这里没有敏感词"))
-
-    fmt.Println(filterManager.GetFilter().FindAllCount("这是敏感词1,这是敏感词2,这是敏感词3,这是敏感词1,这里没有敏感词"))
-}
 ```
 
 ## ✔ Get
 
 ```
-$ go get -u github.com/StellarisW/go-sensitive
 ```
 
 ## 📂 Import
 
 ```go
-import "github.com/StellarisW/go-sensitive"
 ```
 
 ## 
