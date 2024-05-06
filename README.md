@@ -1,6 +1,7 @@
 # 🚫 rust-sensitive
 
 [![build](https://img.shields.io/badge/build-1.00-brightgreen)](https://github.com/wqwqzzz/rust-sensitive)
+
 [English](README.md) | 中文
 
 > 敏感词过滤, 支持多种数据源加载, 多种过滤算法, 多种操作功能
