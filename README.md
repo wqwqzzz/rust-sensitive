@@ -1,6 +1,6 @@
 # 🚫 go-sensitive
 
-[![build](https://img.shields.io/badge/build-1.01-brightgreen)](https://github.com/StellarisW/go-sensitive)[![go-version](https://img.shields.io/badge/go-~%3D1.19-30dff3?logo=go)](https://github.com/StellarisW/go-sensitive)
+[![build](https://img.shields.io/badge/build-1.00-brightgreen)](https://github.com/wqwqzzz/rust-sensitive)[![rust-version]](https://github.com/wqwqzzz/rust-sensitive)
 
 [English](README.md) | 中文
 
