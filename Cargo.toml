@@ -1,10 +1,12 @@
 [package]
 name = "rust_sensitive"
-version = "0.1.0"
+version = "1.0.0"
+authors = ["wqwqzzz <asd_sdw@outlook.com>"]
 edition = "2021"
-
+rust-version = "1.70"
+description = "Sensitive word filtering, support multiple data source loading, multiple filtering algorithms, multiple operation functions"
+readme = "README.md"
+repository = "https://github.com/wqwqzzz/rust-sensitive"
+license = "MIT"
+keywords = ["sensitive"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-utf8_slice = "1.0.0"
-lazy_static = "1.4.0"
