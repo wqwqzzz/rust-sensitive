@@ -1,6 +1,6 @@
 [package]
 name = "rust_sensitive"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["wqwqzzz <asd_sdw@outlook.com>"]
 edition = "2021"
 rust-version = "1.70"
