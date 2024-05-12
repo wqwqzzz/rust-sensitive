@@ -90,7 +90,7 @@ impl DfaSensitiveWordMap {
                     text.len()
                 };
 
-                return  text[start..end].to_string()
+                return text[start..end].to_string();
             }
             i += 1
         }
@@ -135,7 +135,7 @@ fn check_sensitive_words(
 ) -> usize {
     let mut match_flag = 0; // 敏感词长度
     let mut now_map = sensitive_word_map;
-    let mut flag = false; 
+    let mut flag = false;
     for i in begin_index..target_text.len() {
         let word = match target_text.chars().nth(i) {
             Some(ch) => ch,

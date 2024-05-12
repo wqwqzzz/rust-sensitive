@@ -23,7 +23,7 @@ fn test_replace_case1() {
     let replaced_text = sensitive_word_map.replace(text, "*");
     assert_eq!(replaced_text, "你真******ss***");
 }
-#[test] 
+#[test]
 fn test_replace_case2() {
     let sensitive_word_map = AcSensitiveWordMap::init_ac_dic_from_file("./data.txt");
     let text = "敏感测试832as";
@@ -57,7 +57,6 @@ fn test_find_one_case1() {
 
 #[test]
 fn test_find_one_case2() {
-    
     let sensitive_word_map = AcSensitiveWordMap::init_ac_dic_from_file("./data.txt");
     let text = "这是个测案例试";
     let result = sensitive_word_map.find_one(text);
@@ -71,12 +70,19 @@ fn test_find_all_case1() {
     let text = "你真敏感测试asss832";
     let result = sensitive_word_map.find_all(text);
 
-    assert_eq!(result, vec!["敏感".to_string(),"测试".to_string(),"as".to_string(),"832".to_string()]);
+    assert_eq!(
+        result,
+        vec![
+            "敏感".to_string(),
+            "测试".to_string(),
+            "as".to_string(),
+            "832".to_string()
+        ]
+    );
 }
 
 #[test]
 fn test_find_all_case2() {
-    
     let sensitive_word_map = AcSensitiveWordMap::init_ac_dic_from_file("./data.txt");
     let text = "这是个测案例试";
     let result = sensitive_word_map.find_all(text);
