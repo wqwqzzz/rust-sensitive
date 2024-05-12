@@ -4,7 +4,7 @@ use std::io::Read;
 
 
 // 初始化map，阅读文件？根据参数不同选择不同的阅读方式？
-fn read_file(file_path: &str) -> Result<String, std::io::Error> {
+pub fn read_file(file_path: &str) -> Result<String, std::io::Error> {
     let mut file = File::open(file_path)?;
     let mut content = String::new();
     file.read_to_string(&mut content)?;

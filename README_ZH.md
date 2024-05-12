@@ -20,22 +20,34 @@
     - 🔲 支持mongo存储
 - 支持多种过滤算法
     - ✅ **DFA** 使用 `HashMap` 数据结构匹配敏感词
-    - 🔲 **AC 自动机**
+    - ✅ **AC 自动机**
 
 ## ⚙ Usage
 ### first use
 ```rust
-    use rust_sensitive::rust_sensitive::model::DfaSensitiveWordMap;
+    use rust_sensitive::model::DfaSensitiveWordMap;
 
     fn test(){
         // Initialize the sensitive_map
         let map =DfaSensitiveWordMap::init_dfa_dic_from_file("./data.txt");
         /* because use once_cell,you can use 
          DfaSensitiveWordMap::get_dfa_dic() 
-         to get the sensitive_map */
+         to get the sensitive_map 
+        */
+
+        /*
+        if use ac algorithm,you can use
+        use rust_sensitive::model::AcSensitiveWordMap;
+
+        let map =AcSensitiveWordMap::init_ac_dic_from_file("./data.txt"); 
+        and because use once_call,you can also use
+        AcSensitiveWordMap::get_ac_dic()
+        to get the sensitive_map
+        */
     }
     fn test2(){
         let map = DfaSensitiveWordMap::get_dfa_dic();
+        // let map = AcSensitiveWordMap::get_ac_dic();
     }
 ```
 ### filter()
@@ -105,7 +117,7 @@
 或者在 Cargo.toml 中添加以下一行：
 ```
     [dependencies]
-    rust_sensitive = "1.0.0"
+    rust_sensitive = "1.1.0"
 ```
 
 
